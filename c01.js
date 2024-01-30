@@ -1,4 +1,5 @@
 function sum(...numbers) {
+    //write code here
     return numbers.reduce((accumulator, currentValue) => accumulator + currentValue);
 }
 console.log(sum(1, 2, 7));
