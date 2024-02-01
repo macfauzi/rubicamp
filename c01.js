@@ -1,11 +1,11 @@
-// function sum(...numbers) {
-//     //write code here
-//     console.log(numbers.reduce((accumulator, currentValue) => accumulator + currentValue));
-// }
-// sum(1, 2, 7);
-// sum(1, 4);
-// sum(11);
-// sum(10, 3, 6, 7, 9);
+function sum(...numbers) {
+    //write code here
+    console.log(numbers.reduce((accumulator, currentValue) => accumulator + currentValue));
+}
+sum(1, 2, 7);
+sum(1, 4);
+sum(11);
+sum(10, 3, 6, 7, 9);
 
 // alternatif02 dengan menggunakan Array.from() yang merubah arguments menjadi array
 
@@ -34,16 +34,16 @@
 
 // alternatif04 cara pemula dengan menggunakan for loop
 
-function sum() {
-    // your code below
-    let hasil = 0;
-    for (let i = 0; i < arguments.length; i++) {
-        hasil += arguments[i];
-    }
-    console.log(hasil);
-}
+// function sum() {
+//     // your code below
+//     let hasil = 0;
+//     for (let i = 0; i < arguments.length; i++) {
+//         hasil += arguments[i];
+//     }
+//     console.log(hasil);
+// }
 
-sum(1, 2, 7);
-sum(1, 4);
-sum(11);
-sum(10, 3, 6, 7, 9);
+// sum(1, 2, 7);
+// sum(1, 4);
+// sum(11);
+// sum(10, 3, 6, 7, 9);
