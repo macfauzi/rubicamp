@@ -1,6 +1,6 @@
 function stringManipulation(word) {
     // write your code here
-    const vowels = 'aiueo';
+    const vowels = 'aAiIuUeEoO';
     if (vowels.includes(word[0])) {
         return console.log(word);
     } else {
@@ -11,3 +11,5 @@ function stringManipulation(word) {
 
 stringManipulation('ayam'); // "ayam"
 stringManipulation('bebek'); // "ebekbnyo"
+stringManipulation('Ayam'); // "Ayam"
+stringManipulation('Bebek'); // "ebekBnyo"
