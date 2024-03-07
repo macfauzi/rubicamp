@@ -1,14 +1,17 @@
-if (process.argv[2] !== 'data.json') {
-    console.log(`Tolong sertakan nama file sebagai inputan soalnya 
-Misalnya 'node solution.js data.json'`);
+const jsonFile = process.argv[2];
+
+if (!jsonFile) {
+    console.log(`Tolong sertakan nama file sebagai inputan soalnya\n 
+    Misalnya 'node solution.js data.json'`);
     process.exit();
 }
 
+const { error } = require('node:console');
 const { readFileSync } = require('node:fs');
-const result = readFileSync('data.json', 'utf-8');
+const result = readFileSync(`${jsonFile}`, 'utf-8');
 const data = JSON.parse(result);
 
-console.log(`Selamat datang di permainan Tebak-tebakan. kamu adakan diberikan pertanyaan dari file ini '${process.argv[2]}'.
+console.log(`Selamat datang di permainan Tebak-tebakan. kamu akan diberikan pertanyaan dari file ini '${process.argv[2]}'.
 Untuk bermain, jawablah dengan jawaban yang sesuai.
 Gunakan 'skip' untuk menangguhkan pertanyaannya, dan di akhir pertanyaan akan ditanyakan lagi.\n`);
 
@@ -51,3 +54,4 @@ rl.on('line', (input) => {
     console.log(`Anda Berhasil!\n`);
     process.exit(0);
 });
+
