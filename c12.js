@@ -25,7 +25,7 @@ const rl = readline.createInterface({
 
 let counter = 0;
 let wrongGuess = 0;
-let skip = 0;
+// let skip = 0;
 
 console.log(`Pertanyaan: ${data[counter].definition}`);
 rl.prompt();
@@ -34,15 +34,16 @@ rl.prompt();
 rl.on('line', (input) => {
     if (input.trim().toLowerCase() === data[counter].term.toLowerCase()) {
         console.log(`\nAnda Beruntung!\n`);
+        wrongGuess = 0;
         counter++;
         if (counter === data.length) rl.close();
         console.log(`Pertanyaan: ${data[counter].definition}`);
     } else if (input.trim().toLowerCase() === 'skip') {
-        skip++;
-        wrongGuess = 0;
+        // skip++;
         data.push(data[counter]);
-        data.splice(counter, skip);
+        data.splice(counter, 1);
         console.log(`Pertanyaan: ${data[counter].definition}\n`);
+        wrongGuess = 0;
     } else {
         wrongGuess++
         console.log(`\nAnda Kurang Beruntung! anda telah salah ${wrongGuess} kali, silahkan coba lagi.\n`);
