@@ -144,7 +144,7 @@ tags: ${data[taskId].tags}
 
     default:
         const cmd = params[2];
-        if (cmd !== 'help' && cmd !== undefined) {
+        if (cmd.startsWith("filter:")) {
             console.log('Daftar Pekerjaan:')
             result = cmd.split(":");
             data.forEach((items, index) => {
