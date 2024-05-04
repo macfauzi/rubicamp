@@ -4,16 +4,16 @@ CREATE TABLE jurusan (
 );
 
 INSERT INTO jurusan ("jurusan_id", "namajurusan") VALUES
-('CTI', 'Teknik Informatika'),
-('CSI', 'Sistem Informasi'),
-('ETE', 'Teknik Elektro'),
-('ETM', 'Teknik Mesin'),
-('CIK', 'Ilmu Komputer');
+('TEI', 'Teknik Informatika'),
+('SII', 'Sistem Informasi'),
+('TEE', 'Teknik Elektro'),
+('TEM', 'Teknik Mesin'),
+('ILK', 'Ilmu Komputer');
 
 
 
 CREATE TABLE mahasiswa (
-    nim VARCHAR(10) PRIMARY KEY NOT NULL,
+    nim VARCHAR(4) PRIMARY KEY NOT NULL,
     nama VARCHAR(50) NOT NULL,
     alamat TEXT, 
     jurusan_id CHAR(3) NOT NULL,
@@ -39,16 +39,16 @@ CREATE TABLE dosen (
 );
 
 INSERT INTO dosen VALUES
-('11201013', 'Mark Zuckerberg'),
-('11202014', 'Bill Gates'),
-('11201015', 'Tim Cook'),
-('11202016', 'Satya Nadella'),
-('11201017', 'Jeff Bezos'),
-('11202018', 'Larry Page'),
-('11201019', 'Sundar Pichai'),
-('11202020', 'Jack Dorsey'),
-('11201021', 'Elon Reeve Musk'),
-('11202022', 'Steve Jobs');
+('D01', 'Mark Zuckerberg'),
+('D02', 'Bill Gates'),
+('D03', 'Tim Cook'),
+('D04', 'Satya Nadella'),
+('D05', 'Jeff Bezos'),
+('D06', 'Larry Page'),
+('D07', 'Sundar Pichai'),
+('D08', 'Jack Dorsey'),
+('D09', 'Elon Reeve Musk'),
+('D10', 'Steve Jobs');
 
 
 CREATE TABLE teach (
@@ -81,16 +81,16 @@ CREATE TABLE matakuliah (
 );
 
 INSERT INTO matakuliah (matakuliah_id, nama, sks, nip) VALUES
-('CSI010', 'Pemrograman Web', 4, '11201013'),
-('CTI020', 'Basis Data', 3, '11202014'),
-('CSI030', 'Jaringan Komputer', 3, '11201015'),
-('CTI040', 'Sistem Operasi', 3, '11202016'),
-('CSI050', 'Data Mining', 4, '11201017'),
-('CTI060', 'Kecerdasan Buatan', 4, '11202018'),
-('CSI070', 'Pengembangan Aplikasi Mobile', 3, '11201019'),
-('CTI080', 'Analisis Algoritma', 3, '11202020'),
-('CSI090', 'Sistem Informasi Geografis', 4, '11201021'),
-('CTI100', 'Pengolahan Citra Digital', 4, '11201013');
+('M01', 'Pemrograman Web', 4, '11201013'),
+('M02', 'Basis Data', 3, '11202014'),
+('M03', 'Jaringan Komputer', 3, '11201015'),
+('M04', 'Sistem Operasi', 3, '11202016'),
+('M05', 'Data Mining', 4, '11201017'),
+('M06', 'Kecerdasan Buatan', 4, '11202018'),
+('M07', 'Pengembangan Aplikasi Mobile', 3, '11201019'),
+('M08', 'Analisis Algoritma', 3, '11202020'),
+('M09', 'Sistem Informasi Geografis', 4, '11201021'),
+('M10', 'Pengolahan Citra Digital', 4, '11201013');
 
 
 
