@@ -187,14 +187,23 @@ SELECT nim, nama, nama_mk AS mata_kuliah
 FROM mahasiswa
 LEFT JOIN teach USING(nim)
 LEFT JOIN matakuliah USING (id_mk)
-WHERE nama_mk = 'Data Mining';
+WHERE nama_mk LIKE '%Data Mining%';
 
 -- Task #6
+SELECT nama_dosen, COUNT (DISTINCT nim) AS jumlah_mahasiswa 
+FROM dosen 
+LEFT JOIN teach USING(nip) 
+LEFT JOIN mahasiswa USING(nim)
+GROUP BY nama_dosen;
+
+/* previous query
+
 SELECT nama_dosen, count(nim) AS jumlah_mahasiswa 
 FROM mahasiswa 
 LEFT JOIN teach USING(nim) 
 LEFT JOIN dosen USING(nip) 
 GROUP BY nama_dosen; 
+*/
 
 -- Task #7
 SELECT * 
