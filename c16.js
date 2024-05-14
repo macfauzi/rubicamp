@@ -83,7 +83,6 @@ warranty    : ${car.warranty} year
 ${this.desc ? car.year + car.warranty >= this.sim ? this.desc + 'active' : this.desc + 'expired' : ''}
             `)
         }
-
     }
 }
 
